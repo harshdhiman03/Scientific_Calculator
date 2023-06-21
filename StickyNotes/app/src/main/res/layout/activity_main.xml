@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black_color"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idEdt"
+        android:layout_alignParentTop="true"
+        android:background="@color/black_color"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Enter your note details"
+        android:gravity="start|top"
+        android:layout_above="@+id/idLL1"
+        android:inputType="textImeMultiLine"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/idFAVSave"
+        android:layout_margin="3dp"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/idLL2"
+        android:onClick="saveButton"
+        android:backgroundTint="@color/fab_color"
+        android:src="@drawable/save"
+        android:layout_alignParentRight="true" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/idLL2"
+        android:id="@+id/idLL1"
+        android:background="@color/purple_200"
+        android:layout_toStartOf="@id/idFAVSave"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@id/idFAVSave">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="-"
+            android:id="@+id/idbtnreducesize"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="12"
+            android:textAlignment="center"
+            android:id="@+id/idtvsize"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+             />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+"
+            android:id="@+id/idbtnincreasesize"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+
+
+        
+    </LinearLayout>
+        
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idLL2"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="3"
+        >
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="B"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:id="@+id/idbtnbold"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="U"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:id="@+id/idbtnUnderline"/>
+        <Button
+            android:id="@+id/idbtnIlastic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:text="I"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+        
+  
+
+</RelativeLayout>
